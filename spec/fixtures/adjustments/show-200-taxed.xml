@@ -1,0 +1,58 @@
+HTTP/1.1 200 OK
+Content-Type: application/xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<adjustment href="https://api.recurly.com/v2/adjustments/abcdef1234567890" type="charge">
+  <account href="https://api.recurly.com/v2/accounts/account"/>
+  <invoice href="https://api.recurly.com/v2/invoices/created-invoice"/>
+  <subscription href="https://api.recurly.com/v2/subscriptions/abcdef1234567890"/>
+  <uuid>abcdef1234567890</uuid>
+  <state>pending</state>
+  <accounting_code nil="nil"></accounting_code>
+  <origin>plan</origin>
+  <description>$12 Annual Subscription</description>
+  <unit_amount_in_cents type="integer">1200</unit_amount_in_cents>
+  <quantity type="integer">1</quantity>
+  <discount_in_cents type="integer">0</discount_in_cents>
+  <tax_in_cents type="integer">0</tax_in_cents>
+  <total_in_cents type="integer">1200</total_in_cents>
+  <currency>USD</currency>
+  <tax_exempt type="boolean">false</tax_exempt>
+  <product_code>basic</product_code>
+  <!-- Vertex -->
+  <tax_types type="array">
+    <tax_type>
+      <type>General Sales and Use Tax</type>
+      <juris_details type="array">
+        <juris_detail>
+          <classification>tax</classification>
+          <jurisdiction>STATE</jurisdiction>
+          <jurisdiction_name nil="nil"></jurisdiction_name>
+          <tax_in_cents type="integer">115</tax_in_cents>
+          <description>Sales Tax</description>
+          <rate type="float">0.056</rate>
+        </juris_detail>
+        <juris_detail>
+          <classification>tax</classification>
+          <jurisdiction>COUNTY</jurisdiction>
+          <jurisdiction_name nil="nil"></jurisdiction_name>
+          <tax_in_cents type="integer">10</tax_in_cents>
+          <description>Sales Tax</description>
+          <rate type="float">0.005</rate>
+        </juris_detail>
+        <juris_detail>
+          <classification>tax</classification>
+          <jurisdiction>DISTRICT</jurisdiction>
+          <jurisdiction_name nil="nil"></jurisdiction_name>
+          <tax_in_cents type="integer">103</tax_in_cents>
+          <description>Sales Tax</description>
+          <rate type="float">0.05</rate>
+        </juris_detail>
+      </juris_details>
+    </tax_type>
+  </tax_types>
+  <!-- /Vertex -->
+  <start_date type="datetime">2011-04-30T07:00:00Z</start_date>
+  <end_date type="datetime">2011-04-30T07:00:00Z</end_date>
+  <created_at type="datetime">2011-08-31T03:30:00Z</created_at>
+</adjustment>
